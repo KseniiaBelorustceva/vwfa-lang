@@ -1,2 +1,10 @@
 # vwfa-lang
-Psychological experiment about words in different languages. Related visual word form area of brain.
+Simple psychological experiment in field of second language acquisition.
+
+# Description of the experiment to be here
+
+# Implementation to be here 
+Java, JavaScript
+Spring, Groovy, JQuery, AngularJS, jsPsych
+'Database' = csv file
+
