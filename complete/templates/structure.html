@@ -3,7 +3,8 @@
   <head>
     <title>Language experiment</title>
    	<script src="js/jquery.min.js"></script>
-    <script src="jspsych.js"></script>
+    <script src="js/jspsych.js"></script>
+    <script src="js/main.js"></script>
 	<script src="jsPsych-4.0/plugins/jspsych-text.js"></script>
     <script src="jsPsych-4.0/plugins/jspsych-xab.js"></script>
 	<script src="jsPsych-4.0/plugins/jspsych-animation.js"></script>
@@ -162,8 +163,10 @@
 		experiment_structure: exp_timeline,
 		on_finish: function() {
 			jsPsych.data.displayData();
+			backToSite();
 		}
     });
+
 	
   </script>
 </html/*  */>
