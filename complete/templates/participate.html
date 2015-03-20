@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Language Experiment</title>
+<link href="styles/main.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n6:default.js" type="text/javascript"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+</head>
+
+<body>
+<div id="wrapper">
+    <header id="top">
+        <h1>Language Experiment</h1>
+	<nav id="mainnav">
+     <ul>
+        <li><a href="index.html" class="thispage">Home</a></li>
+        <li><a href="research.html">Learn more</a></li>
+        <li><a href="participate.html">Participate</a></li>
+        <li><a href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+    </header>
+    <div id="hero" class="centered"><img src="img/lingue.png" width="540" height="132" alt=""/></div>
+    <article id="main">
+<h2>Participant information</h2>
+        <p>Data collected for this study may be analyzed in various ways in which certain non-identifying participant information may be helpful. If you wish to participate, please provide the following information. Be advised that this information is used for research purposes only. Items preceded by a red asterik are required.</p>
+        
+     <div id="participant_form">   
+       <form name="participantForm" action="structure.html" onsubmit="return validateForm()" method="post">
+          <p>Gender: 
+          		<input type="radio" name="gender" id="male" > Male
+          		<input type="radio" name="gender" id="female" > Female 
+           </p>
+          <p>Age: <input type="number" min="10" max="100"></p> <p id="valid_msg_age"></p>
+          <p>Hand preference: 
+          		<input type="radio" name="hand" id="left_hand" > Left
+          		<input type="radio" name="hand" id="right_hand" > Right </p>
+          <p>Your native language is: 
+          	 	<br><input type="radio" name="native" id="native_fin" > Finnish
+          		<br><input type="radio" name="native" id="native_rus" > Russian
+                <br><input type="radio" name="native" id="native_eng" > English
+                <br><input type="radio" name="native" id="native_oth" > Other language
+          </p>
+          <p>Your second language is: 
+          	 	<br><input type="radio" name="second" id="second_fin" > Finnish
+          		<br><input type="radio" name="second" id="second_rus" > Russian
+                <br><input type="radio" name="second" id="second_eng" > English
+                <br><input type="radio" name="second" id="second_oth" > Other language
+          </p>
+          <p>What are your skills in these languages? (1-beginner, ... 5-native):  <p id="valid_msg_skills"></p>
+          	 	<br><input type="number" name="skills" id="skills_fin" min="1" max="5"> Finnish
+          		<br><input type="number" name="skills" id="skills_rus" min="1" max="5"> Russian
+                <br><input type="number" name="skills" id="skills_eng" min="1" max="5"> English
+                <br><input type="number" name="skills" id="skills_oth" min="1" max="5"> Other language
+          </p>
+          <p>How many years you've been living in these countries? <p id="valid_msg_years"></p>
+          	 	<br><input type="number" name="country" id="country_fin" min="0" max="100"> Finland
+          		<br><input type="number" name="country" id="country_rus" min="0" max="100"> Russia
+                <br><input type="number" name="country" id="country_eng" min="0" max="100"> English-speaking country
+                <br><input type="number" name="country" id="country_oth" min="0" max="100"> Other countries
+          </p>
+          <br>
+          <p align="center">
+		  <!-- User will click buttons below to indicate if they wish to continue -->
+		  <input type="submit" name="Accept" value="Submit and go to experiment" onclick="submitForm()" language="javascript" id="submit" />
+		</p>
+ 
+        </form> 
+        <script>
+		function validateForm() {
+			var inpObj = document.getElementById("id1");
+			if (inpObj.checkValidity() == false) {
+				document.getElementById("demo").innerHTML = inpObj.validationMessage;
+			}
+		}
+		</script>
+     </div>
+        
+<h2>Timing accuracy</h2>
+        <p>This study involves timing, either for tachistoscopic display, for measurement of reaction time, or other functions. Timing accuracy can be degraded by other programs executing concurrently or by background network traffic to this machine (such as streaming real audio or real video).
+Please close all other programs that use an Internet or network connection such as mail clients and instant messaging applications. </p>
+
+
+
+    <footer>
+        <p>© Copyright 2015 Aalto Brain&amp;Mind</p>
+    </footer>
+</div>
+</body>
+</html>
