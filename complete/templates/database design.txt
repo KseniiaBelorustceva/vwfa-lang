@@ -1,0 +1,39 @@
+CREATE TABLE participant (
+timestamp TIMESTAMP,
+part_id INT(5), // from jsPsych
+age INT(2),
+gender CHAR(1),
+hand CHAR(1), 
+native_lang VARCHAR(3), // eng, fin, rus, ...oth=other
+second_lang VARCHAR(3), 
+other1_lang VARCHAR(3),
+other2_lang VARCHAR(3),  
+skills_grade_fin INT(1), // 1-5
+skills_grade_rus INT(1), // 1-5
+skills_grade_eng INT(1), // 1-5
+skills_grade_oth INT(1), // 1-5
+live_fin INT(2), // how many years
+live_rus INT(2),
+live_eng INT(2), // lives in eng-speaking country
+live_oth INT(2)
+)
+
+CREATE TABLE worddata(  
+rt_FIN_trial INT(10), // write after full fin trial for each of 30 words
+correct_FIN_trial INT(1),
+
+rt_RUS_trial INT(10), // write after full fin trial for each of 30 words
+correct_RUS_trial INT(1),
+
+rt_FAR_trial INT(10), // write after full fin trial for each of 30 words
+correct_FAR_trial INT(1),
+
+rt_CHI_trial INT(10), // write after full fin trial for each of 30 words
+correct_CHI_trial INT(1),
+)
+
+RELATION: 
+1 participant - N worddata 
+1 participant - 30 worddata
+total participants: ? 
+
