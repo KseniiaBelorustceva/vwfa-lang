@@ -1,0 +1,59 @@
+notebook 
+
+Writing my experiment on node.js+express from mean titorial
+
+1) replace 'contact list' with my form 'participant'
+2) page 'participant' is not /index
+3) /index page in hello page
+
+4) write participant data to mongodb
+5) write test experiment data to mongodb, 1:N: participant:word?
+6) ,,, can write even nore data: not only each word, but also summaries from jspsych
+7) cut pictures ->
+8) test???
+
+9) ready to put online
+
+
+!!
+29 Mar
+
+- dont loose time for transfeffing variable-id between participant and experiment.
+- notice that in db, id for each of experimental data follows participant id,
+
+--- that means that each "_id": ObjectID("......<last numbers>") in actual data of last participant will be greater than  "_id": ObjectID("......<last numbers>") of the participant itself.
+
+---- and counting if IDs is 16x system, so: ...86, 87, 88, 89, 8a->participant , 8b, 8c, 8d, 8e->participant, 8e, 8f, 90,  ...
+
+* no need for Start Experiment button
+
+!!! check possibility to use cookie for session, (30 min) and if dies not work, then use raw _id compartion: 
+
+=---write participant and data to one 'session' collection
+=---order all data by ObjectID 
+
+=--- when done with all, convert csv: http://www.convertcsv.com/json-to-csv.htm
+
+
+ps. format jpsych- writing 
+=---- is just a modifying LAST query!!!
+=---> no  query for getting ID, just MODIFY last PARTICIPANT, adding EXPERIMENT_RESULTS
+
+{
+
+"_id" : ...86,
+"age/gender/lang" : ...
+
+"EXPERIMENT_RESULTS" : 
+		[
+           {
+           	"_id" : ...87,
+             "rt/answer" : ...
+           },
+           { 
+			"_id" : ...87,
+           "rt/answer" : ...
+           }
+		]
+}
+

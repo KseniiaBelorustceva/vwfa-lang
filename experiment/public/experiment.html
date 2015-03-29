@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <title>Language experiment</title>
+   	<script src="js/jquery.min.js"></script>
+    <script src="js/jspsych.js"></script>
+	<script src="jsPsych-4.0/plugins/jspsych-text.js"></script>
+    <script src="jsPsych-4.0/plugins/jspsych-xab.js"></script>
+	<script src="jsPsych-4.0/plugins/jspsych-animation.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.js"></script>
+
+    <link rel="stylesheet" href="jsPsych-4.0/css/jspsych.css"></link>
+
+	<script src="controllers/common.js"></script>
+
+	<!-- Making it possible to call controller from outside -->
+	<script> 
+	function call() {
+    var scope = angular.element(document.getElementById('container')).scope();
+      	scope.$apply(function() {
+      		scope.doExperiment();
+    	})
+	}
+	</script>
+
+	
+   	<style>
+      img { width: 300px; height: 100px;}
+    </style>
+  </head>
+ 
+ <body>
+    <div id="container" ng-controller="AppCtrl">
+	  	<div id="jspsych-target"></div>
+	  	<!-- Experiment is there -->
+	  	
+		<!--body onload="doExperiment()"-->
+		<!--body onload="angular.element($(#'AppCtrl')).scope().doExperiment()"-->	
+		
+		<body onload='call()'>	
+			
+		<!--button class = 'btn btn-info' ng-click='doExperiment()'>Start experiment</button-->
+		<!--button class = 'btn btn-info' ng-click='doExperiment('{{particID}}')'>Start experiment</button-->
+	  </div>	
+	</div>	
+ </body>
+
+ 	
+</html>

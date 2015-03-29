@@ -1,8 +1,0 @@
----
-applications:
-- name: vwfa-lang
-  memory: 128M
-  instances: 1
-  host: vwfa-lang
-  domain: cfapps.io
-  path: build/libs/vwfa_lang-0.1.0.jar
